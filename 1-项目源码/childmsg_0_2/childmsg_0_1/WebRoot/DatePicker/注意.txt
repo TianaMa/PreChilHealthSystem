@@ -1,0 +1,10 @@
+使用时注意
+
+根目录名：DatePicker 不能改名
+
+在引入时：
+<script language="javaScript" type="text/javascript" src="DatePicker/WdatePicker.js"></script>
+
+
+在页面中使用日期控件:
+<input id="dt" name="dt" type="text"  onfocus="WdatePicker()"/>

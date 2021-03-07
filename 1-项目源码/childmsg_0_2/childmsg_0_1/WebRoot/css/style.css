@@ -1,0 +1,105 @@
+/* CSS Document */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+#title {
+	height: 22px;
+	background: url(../images/title_bg1.jpg) repeat-x;
+	color: #333399;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+#inner_top {
+	padding-left: 5px;
+	padding-top: 5px;
+	margin: 0;
+	color: #330099;
+}
+
+.text_input {
+	width: 100px;
+}
+
+.main_title {
+	margin: 0;
+	border-rigth: white 1px solid;
+	padding-right: 4px;
+	border-top: #fff 1px solid;
+	padding-left: 4px;
+	background: #6699CC;
+	padding-bottom: 4px;
+	overflow: hidden;
+	/*border-left: white 1px solid;*/
+	cursor: hand;
+	padding-top: 4px;
+	border-bottom: #555 1px solid;
+	white-space: : nowrap;
+	font-size: 13px;
+}
+
+.main_data {
+	BORDER-RIGHT: #ddd 1px solid;
+	PADDING-RIGHT: 4px;
+	BORDER-TOP: #fff 1px solid;
+	PADDING-LEFT: 4px;
+	PADDING-BOTTOM: 4px;
+	OVERFLOW: hidden;
+	BORDER-LEFT: #fff 1px solid;
+	PADDING-TOP: 4px;
+	BORDER-BOTTOM: #ddd 1px solid;
+}
+
+#board {
+	text-align: center;
+	margin: 2px auto;
+	font: 'ËÎÌו';
+	font-size: 36px;
+	color: #006600;
+	font-weight: bold;
+	background: #93FFFF;
+}
+
+.model_show {
+	width: 100%;
+	display: none;
+	position: relative;
+}
+
+#report_show {
+	margin: 5px auto;
+	height: 450px;
+	width: 99%;
+	text-align: center;
+	overflow: auto;
+}
+
+.table{
+	border: 1px solid black;
+	border-color: blue;
+	border-collapse: collapse;	
+}
+.table .title{
+	background: #6699CC;
+}
+.table .trb:hover{
+	background: yellow;	
+}
+.table a{
+	text-decoration: none;
+	color: black;
+}
+.table a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.table .tdb{
+	background: #CECEFF;
+}
+select{
+	width: 100px;	
+}

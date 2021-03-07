@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/tx  
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd  
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/childmsg" />
+		<property name="username" value="root" />
+		<property name="password" value="1234" />
+		<property name="initialSize" value="1" />
+		<property name="maxActive" value="500" />
+		<property name="maxIdle" value="2" />
+		<property name="minIdle" value="1" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>com/lzl/child/bean/Child.hbm.xml</value>
+				<value>com/lzl/child/bean/Prove.hbm.xml</value>
+				<value>com/lzl/child/bean/Sick.hbm.xml</value>
+				<value>com/lzl/child/bean/Health.hbm.xml</value>
+				<value>com/lzl/child/bean/Birth.hbm.xml</value>
+				<value>com/lzl/child/bean/Deadreason.hbm.xml</value>
+				<value>com/lzl/child/bean/Dead.hbm.xml</value>
+				<value>com/lzl/child/bean/Protect.hbm.xml</value>
+				<value>com/lzl/child/bean/Yimiao.hbm.xml</value>
+				<value>com/lzl/child/bean/Users.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+				hibernate.dialect=org.hibernate.dialect.SybaseDialect
+				hibernate.show_sql=true
+				hibernate.format_sql=true
+	      </value>
+		</property>
+	</bean>
+	
+</beans>

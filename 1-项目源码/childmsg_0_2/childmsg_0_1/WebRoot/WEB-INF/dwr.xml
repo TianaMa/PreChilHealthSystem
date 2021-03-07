@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+	<allow>
+		<create javascript="childDao" creator="spring">
+			<param name="beanName" value="childDao"></param>
+		</create>
+		<create javascript="proveDao" creator="spring">
+			<param name="beanName" value="proveDao"></param>
+		</create>
+		<create javascript="sickDao" creator="spring">
+			<param name="beanName" value="sickDao"></param>
+		</create>
+		
+		<create javascript="protectDao" creator="spring">
+			<param name="beanName" value="protectDao"></param>
+		</create>
+		<create javascript="yimiaoDao" creator="spring">
+			<param name="beanName" value="yimiaoDao"></param>
+		</create>
+		<create javascript="healthDao" creator="spring">
+			<param name="beanName" value="healthDao"></param>
+		</create>
+		<create javascript="birthDao" creator="spring">
+			<param name="beanName" value="birthDao"></param>
+		</create>
+		
+		<convert match="com.lzl.child.bean.Birth" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Health" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Child" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Prove" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Sick" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Protect" converter="bean"></convert>
+		<convert match="com.lzl.child.bean.Yimiao" converter="bean"></convert>
+		<convert match="com.lzl.child.util.M" converter="bean"></convert>
+	</allow>
+</dwr>

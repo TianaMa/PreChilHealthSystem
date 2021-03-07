@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    
+    <package name="child" extends="jfreechart-default">
+    	<action name="*Action" class="{1}Action">
+    		<result>{1}.jsp</result>
+    		<result name="cr">childReport.jsp</result>
+    		<result name="dead">deadReport.jsp</result>
+    		<result name="error">login.jsp</result>
+    		<result name="pass">password.jsp</result>
+    		<result name="index" type="redirect">index.jsp</result>
+    	</action>
+    </package>
+    
+    
+    <package name="report" extends="child">
+    	<action name="report" class="reportAction">
+    		<result name="child" type="chart">
+    			<param name="width">700</param>
+				<param name="height">400</param>
+    		</result>
+    	</action>
+    </package>
+</struts>
